@@ -75,6 +75,11 @@ body{
 }
 
 
+.btn-Cstm{
+    background-color: #764199;
+    color: #fff;
+}
+
 .site-content-thankyou{
     background-image: url('/images/banners/thanks-banner.jpg');
     background-attachment: fixed;

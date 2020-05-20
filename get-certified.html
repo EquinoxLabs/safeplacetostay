@@ -14,6 +14,81 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
         </style>
+
+<style>
+        
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border-radius: 10px;
+      border: 1px solid #888;
+      width: 70%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+    
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+    
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+    
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 18px;
+      font-weight: bold;
+      padding-right: 15px;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .Cstmmodal-header {
+        padding: 15px 0px 10px 15px;
+      background-color: #764199bd;
+      color: white;
+      height: 60px;
+      float: left;
+    }
+    
+    .modal-body {
+        padding: 2px 16px;
+
+    }
+  
+</style>
         
 </head>
 <body>
@@ -168,7 +243,7 @@
             <div class="row justify-content-start pb-4">
                 <h3 style="color: #764199 ; font-weight: 600;"> <u > How to Get Certified </u> </h3> 
                 <p class="h6"> 
-                    You can become a ‘Safe Place to Stay’ by following these 4-steps leading to a safety standards  audit and receive a Safe Place to Stay  Certification 
+                    You can become a ‘Safe Place to Stay’ by following these 4-steps leading to a safety standards  audit and receive a Safe Place to Stay Certification.
                 </p>      
             </div>
 
@@ -225,12 +300,62 @@
         </div>
         <!-- Certified Section 2 ends-->
 
+        <!--button starts-->
+        <div class="pt-5 text-center" >
+            <button class="btn btn-lg btn-Cstm" id="myBtn">Know More</button>
+        </div>
+        <!--button ends-->
+
+        <!--Form Modal starts-->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content starts-->
+            <div class="modal-content">
+                <div class="Cstmmodal-header">
+                    <span class="close">&times;</span>
+                    <h4> Fill the Form to Join Us </h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form_lead" action=" https://equinox.njcrm.in/index.php?entryPoint=web_to_lead& page=SPTSEnquiry&owner=d9d4a204-4f14-dde2-5cd9-5b248b15b30b" method="POST" class="form-container">
+                        <div class="form-group">
+                            <input type="text" id="sname" class="form-control" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="semail" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="smobile" class="form-control" name="phone" placeholder="Phone No.">
+                        </div> 
+                        <div class="form-group">
+                            <input type="text" id="scompany" class="form-control" name="account_name" placeholder="Company">
+                        </div> 
+                        <div class="form-group">
+                            <input type="hidden" name="lead_source" value="SPTSEnquiry">
+                            <input type="submit" value="Send Message" class="bton-pop"  >
+                        </div>
+                    </form>
+                </div>
+            <!--form script starts-->
+            </div>
+            <!-- Modal content ends-->
+        </div>
+        <!--Form Modal ends-->
     </div>
 
+    <div class="container-fluid bg-dark mb-0 pt-3 pb-4">
+        <div class="footer-copyright text-center text-white-50">
+            &copy;Copyright 2020 <br>
+            <p class="h6 pt-2">  <b>Disclaimer </b> : The Safe Place to Stay standard is a private standard, it is not associated with any government agency or any other international standard. </p>
+        </div>
+    </div>
 
 </body>
-  <!-- jquery code-->
+
+
+  
   <script src="js/jquery.js"></script>
+  <!--custom js file form form-->
+  <script src="js/Cstmjquery.js"></script>
   <!--bootstrap code of javascript-->
   <script src="js/bootstrap.min.js"></script>
 </html>
